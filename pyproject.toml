@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "mobile-automation-tests"
+version = "0.1.0"
+description = ""
+authors = ["Maksim Kudaev <kudaev.m@nakukop.com>"]
+readme = "README.md"
+packages = [{include = "mobile_automation_tests"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+selene = "^2.0.0b17"
+allure-pytest = "2.12.0"
+Appium-Python-Client = "2.6.1"
+pydantic = "1.10.5"
+python-dotenv = "0.21.0"
+pytest = "7.2.1"
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+addopts = " -vv -s --alluredir=allure-results "
